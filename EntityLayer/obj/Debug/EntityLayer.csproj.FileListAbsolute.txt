@@ -1,12 +1,12 @@
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityLayer.dll.config
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityLayer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityLayer.pdb
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.dll
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.pdb
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityLayer.dll.config
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityFramework.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityFramework.SqlServer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityFramework.xml
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.csproj.AssemblyReference.cache
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.csproj.CoreCompileInputs.cache
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.csproj.CopyComplete
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\EntityLayer\obj\Debug\EntityLayer.pdb

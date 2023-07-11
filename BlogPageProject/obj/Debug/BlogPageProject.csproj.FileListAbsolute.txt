@@ -53,6 +53,8 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPagePr
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\Antlr3.Runtime.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\BusinessLayer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\DataAccessLayer.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.SqlServer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityLayer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\Microsoft.Web.Infrastructure.dll
@@ -66,8 +68,13 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPagePr
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Web.WebPages.Razor.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\WebGrease.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\BusinessLayer.pdb
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\BusinessLayer.dll.config
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\DataAccessLayer.pdb
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\DataAccessLayer.dll.config
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityLayer.pdb
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityLayer.dll.config
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.SqlServer.xml
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Web.Helpers.xml
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Web.Mvc.xml
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Web.Optimization.xml
@@ -83,10 +90,3 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPagePr
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\obj\Debug\BlogPageProject.csproj.CopyComplete
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\obj\Debug\BlogPageProject.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\obj\Debug\BlogPageProject.pdb
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.dll
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.SqlServer.dll
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\BusinessLayer.dll.config
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.xml
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityFramework.SqlServer.xml
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\DataAccessLayer.dll.config
-C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\EntityLayer.dll.config
