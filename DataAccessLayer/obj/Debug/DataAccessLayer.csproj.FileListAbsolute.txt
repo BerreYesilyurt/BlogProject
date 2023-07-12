@@ -13,3 +13,5 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccess
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.CopyComplete
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.pdb
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig1.resources
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.cache

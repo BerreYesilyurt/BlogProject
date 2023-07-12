@@ -1,4 +1,7 @@
-﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+﻿@using PagedList
+@using PagedList.Mvc
+
+@model IEnumerable<EntityLayer.Concrete.Blog>
 
 @{ string color="";}
 
@@ -11,6 +14,7 @@
             </div>
         </div>
         <div class="row">
+            @*Kategori renklerinin arka planları için if blokları*@
             @foreach (var x in Model)
             {
 
@@ -61,3 +65,5 @@
 
     </div>
 </div>
+
+@Html.PagedListPager((IPagedList)Model,page=>Url.Action("Index",new{page}))

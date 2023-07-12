@@ -90,3 +90,7 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPagePr
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\obj\Debug\BlogPageProject.csproj.CopyComplete
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\obj\Debug\BlogPageProject.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\obj\Debug\BlogPageProject.pdb
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.Mvc.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.Mvc.xml
