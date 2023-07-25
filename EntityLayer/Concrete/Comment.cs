@@ -23,5 +23,6 @@ namespace EntityLayer.Concrete
         public int BlogID { get; set; }
 
         public virtual Blog Blog { get; set; }
+        public DateTime CommentDate { get; set; }
     }
 }

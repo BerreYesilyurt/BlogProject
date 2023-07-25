@@ -117,17 +117,21 @@ namespace BlogPageProject.Controllers
 
         public ActionResult BlogDetails()
         {
+
             return View();  
         }
 
-        public PartialViewResult BlogCover() { 
+        public PartialViewResult BlogCover(int id) {
+            var blogDetailsGround = bm.GetBlogById(id);
 
-            return PartialView();
+            return PartialView(blogDetailsGround);
         
         }
 
-        public PartialViewResult BlogReadAll() {
-            return PartialView();
+        public PartialViewResult BlogReadAll(int id) {
+            var blogDetailsList = bm.GetBlogById(id); 
+
+            return PartialView(blogDetailsList);
         
         }
 
