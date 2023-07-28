@@ -14,7 +14,8 @@ namespace BlogPageProject.Controllers
         // GET: About
         public ActionResult Index()
         {
-            return View();
+            var aboutcontent = abm.GetAll();
+            return View(aboutcontent);
         }
 
         public PartialViewResult Footer()
@@ -26,7 +27,9 @@ namespace BlogPageProject.Controllers
 
         public PartialViewResult MeetTheTeam()
         {
-            return PartialView();
+            AuthorManager autman=new AuthorManager();
+            var authorlist = autman.GetAll();
+            return PartialView(authorlist);
         }
     }
 }

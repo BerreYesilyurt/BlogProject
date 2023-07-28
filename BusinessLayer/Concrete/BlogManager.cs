@@ -29,6 +29,12 @@ namespace BusinessLayer.Concrete
                                                         EF metodu kullanmadık. Örneğin ToList yapzarak yapsaydık SOLID'e aykırı hareket edilmiş olurdu.*/
         }
 
+        public List<Blog> GetBlogByCategory(int id)
+        {
+
+            return repoblog.List(x => x.CategoryID == id);
+        }
+
 
 
     }

@@ -135,9 +135,16 @@ namespace BlogPageProject.Controllers
         
         }
 
-        public ActionResult BlogByCategory()
+        public ActionResult BlogByCategory(int id)
         {
-            return View();  
+            var blogListByCategory = bm.GetBlogByCategory(id);
+            var CategoryName = bm.GetBlogByCategory(id).Select(y => y.Category.CategoryName).FirstOrDefault();
+            ViewBag.CategoryName = CategoryName; // Değişkenimizi başka bir sayfaya taşımak istediğimiz için ViewBag kullandık. Yukardaki değişkeni viewbag deişkenmine aktardık.
+
+            var CategoryDescription = bm.GetBlogByCategory(id).Select(y => y.Category.CategoryDescription).FirstOrDefault();
+            ViewBag.CategoryDescription = CategoryDescription;
+
+            return View(blogListByCategory);  
         }
 
 
