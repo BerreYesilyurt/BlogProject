@@ -37,5 +37,34 @@ namespace BlogPageProject.Controllers
             return PartialView();
         }
 
+
+        public ActionResult AdminCommentListTrue()
+        {
+            var commentlist = cm.CommentByStatusTrue();
+
+            return View(commentlist);  
+        }
+
+        public ActionResult StatusChangeToFalse(int id)
+        {
+            cm.CommentStatusChangeToFalse(id);
+            return RedirectToAction("AdminCommentListTrue");
+        }
+
+
+        public ActionResult AdminCommentListFalse()
+        {
+            var commentlistfalse = cm.CommentStatusFalse();
+            return View(commentlistfalse);  
+        }
+
+        public ActionResult StatusChangeToTrue(int id)
+        {
+            cm.CommentStatusChangeToTrue(id);
+            return RedirectToAction("AdminCommentListFalse");
+        }
+
+
+
     }
 }

@@ -19,7 +19,9 @@ namespace DataAccessLayer.Abstract
 
         T GetById(int id); /*ID değerini içeren T sınıfını getirmek*/
 
-        List<T> List(Expression<Func<T,bool>> where);
+        List<T> List(Expression<Func<T,bool>> where); /*Şartlı listeleme*/
+
+        T Find(Expression<Func<T, bool>> where);
 
 
     }
