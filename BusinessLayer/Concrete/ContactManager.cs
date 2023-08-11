@@ -22,5 +22,15 @@ namespace BusinessLayer.Concrete
 
             return repocontact.Insert(c);
         }
+
+        public List<Contact> GelAll()
+        {
+            return repocontact.List();
+        }
+
+        public Contact GetContactDetails(int id)
+        {
+            return repocontact.Find(x=>x.ContactID==id);    
+        }
     }
 }

@@ -19,3 +19,4 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccess
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig3.resources
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig4.resources
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig5.resources
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.mig6.resources

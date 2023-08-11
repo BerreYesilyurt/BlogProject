@@ -31,5 +31,19 @@ namespace BlogPageProject.Controllers
 
             return View();
         }
+
+        public ActionResult SendBox() {
+
+            var messagelist = cm.GelAll();
+
+            return View(messagelist);  
+        
+        }
+
+        public ActionResult MessageDetails(int id)
+        {
+            Contact contact = cm.GetContactDetails(id);
+            return View(contact);
+        }
     }
 }
