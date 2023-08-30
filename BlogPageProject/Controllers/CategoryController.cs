@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,6 +18,7 @@ namespace BlogPageProject.Controllers
             return View(categoryvalues);
         }
 
+        [AllowAnonymous]
         public PartialViewResult BlogDetailsCategoryList()
         {
             var categoryvalues = cm.GetAll();
@@ -28,6 +30,50 @@ namespace BlogPageProject.Controllers
             var categorylist = cm.GetAll();
 
             return View(categorylist);
+        }
+
+        [HttpGet]
+        public ActionResult AdminCategoryAdd()
+        {
+            return View();  
+        }
+        [HttpPost]
+        public ActionResult AdminCategoryAdd(Category p)
+        {
+            cm.CategoryAddBL(p);
+            return RedirectToAction("AdminCategoryList");
+        }
+
+        [HttpGet]
+        public ActionResult CategoryEdit(int id)
+        {
+            Category category = cm.FindCategory(id);
+            return View(category);
+
+        }
+
+        [HttpPost]
+        public ActionResult CategoryEdit(Category p)
+        {
+            cm.EditCategory(p);
+            return RedirectToAction("AdminCategoryList");
+
+        }
+
+        public ActionResult CategoryDelete(int id)
+        {
+            cm.DeleteCategoryBL(id);
+
+            return RedirectToAction("AdminCategoryList");
+
+        }
+
+        public ActionResult CategoryActive(int id)
+        {
+            cm.ActiveCategoryBL(id);
+
+            return RedirectToAction("AdminCategoryList");
+
         }
     }
 }

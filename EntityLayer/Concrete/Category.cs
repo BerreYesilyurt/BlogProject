@@ -20,5 +20,7 @@ namespace EntityLayer.Concrete
         public string CategoryDescription { get; set; } 
 
         public ICollection<Blog> Blogs { get; set; }/* Herhangi bir kategori, birden çok blogu kapsayabilir. Birden çoğa bir ilişki söz konudur. Koleksiyonlar nesneleri gruplamaya yarayan sınıflardır.*/
+
+        public bool CategoryStatus { get; set; }
     }
 }

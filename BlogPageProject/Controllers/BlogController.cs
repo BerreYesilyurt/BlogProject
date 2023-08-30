@@ -16,11 +16,13 @@ namespace BlogPageProject.Controllers
     {
         BlogManager bm = new BlogManager();
         // GET: Blog
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
         }
 
+        [AllowAnonymous]
         public PartialViewResult BlogList(int page = 1)
         {
             var bloglist = bm.GelAll().ToPagedList(page, 6);
@@ -28,6 +30,7 @@ namespace BlogPageProject.Controllers
             return PartialView(bloglist);
         }
 
+        [AllowAnonymous]    
         public PartialViewResult FeaturedPosts()
         {
             // 1. Post
@@ -41,9 +44,12 @@ namespace BlogPageProject.Controllers
             var blogdate1 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 1).Select(y => y.BlogDate).FirstOrDefault();
             // Blog'un tarih(date) değerini çektik.
 
+            var blogpostid1=bm.GelAll().OrderByDescending(z=>z.BlogID).Where(x=>x.CategoryID==1).Select(y=>y.BlogID).FirstOrDefault();  
+
             ViewBag.posttitle1 = posttitle1;
             ViewBag.postimage1 = postimage1;
             ViewBag.blogdate1 = blogdate1;
+            ViewBag.blogpostid1=blogpostid1;    
 
 
             // 2. Post
@@ -56,10 +62,14 @@ namespace BlogPageProject.Controllers
 
             var blogdate2 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogDate).FirstOrDefault();
             // Blog'un tarih(date) değerini çektik.
+            var blogpostid2 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 2).Select(y => y.BlogID).FirstOrDefault();
 
             ViewBag.posttitle2 = posttitle2;
             ViewBag.postimage2 = postimage2;
             ViewBag.blogdate2 = blogdate2;
+            ViewBag.blogpostid2 = blogpostid2;
+
+
 
 
             // 3. Post
@@ -72,10 +82,12 @@ namespace BlogPageProject.Controllers
 
             var blogdate3 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 3).Select(y => y.BlogDate).FirstOrDefault();
             // Blog'un tarih(date) değerini çektik.
+            var blogpostid3 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 3).Select(y => y.BlogID).FirstOrDefault();
 
             ViewBag.posttitle3 = posttitle3;
             ViewBag.postimage3 = postimage3;
             ViewBag.blogdate3 = blogdate3;
+            ViewBag.blogpostid3 = blogpostid3;
 
             // 4. Post
             var posttitle4 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 4).Select(y => y.BlogTitle).FirstOrDefault();
@@ -87,10 +99,14 @@ namespace BlogPageProject.Controllers
 
             var blogdate4 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 4).Select(y => y.BlogDate).FirstOrDefault();
             // Blog'un tarih(date) değerini çektik.
+            // Blog'un tarih(date) değerini çektik.
+            var blogpostid4 = bm.GelAll().OrderByDescending(z => z.BlogID).Where(x => x.CategoryID == 4).Select(y => y.BlogID).FirstOrDefault();
+
 
             ViewBag.posttitle4 = posttitle4;
             ViewBag.postimage4 = postimage4;
             ViewBag.blogdate4 = blogdate4;
+            ViewBag.blogpostid4 = blogpostid4;
 
 
             // İlk atılan Post
@@ -103,26 +119,30 @@ namespace BlogPageProject.Controllers
 
             var blogdatetop = bm.GelAll().OrderBy(z => z.BlogID).Select(y => y.BlogDate).FirstOrDefault();
             // Blog'un tarih(date) değerini çektik.
+            var blogpostidtop = bm.GelAll().OrderBy(z => z.BlogID).Select(y => y.BlogID).FirstOrDefault();
 
             ViewBag.posttitletop = posttitletop;
             ViewBag.postimagetop = postimagetop;
             ViewBag.blogdatetop = blogdatetop;
+            ViewBag.blogpostidtop = blogpostidtop;
 
             return PartialView();
         }
 
+        [AllowAnonymous]
         public PartialViewResult OtherFeaturedPosts()
         {
             return PartialView();
         }
 
-
+        [AllowAnonymous]
         public ActionResult BlogDetails()
         {
 
             return View();
         }
 
+        [AllowAnonymous]    
         public PartialViewResult BlogCover(int id)
         {
             var blogDetailsGround = bm.GetBlogById(id);
@@ -131,6 +151,7 @@ namespace BlogPageProject.Controllers
 
         }
 
+        [AllowAnonymous]    
         public PartialViewResult BlogReadAll(int id)
         {
             var blogDetailsList = bm.GetBlogById(id);
@@ -139,6 +160,7 @@ namespace BlogPageProject.Controllers
 
         }
 
+        [AllowAnonymous]    
         public ActionResult BlogByCategory(int id)
         {
             var blogListByCategory = bm.GetBlogByCategory(id);
@@ -151,6 +173,7 @@ namespace BlogPageProject.Controllers
             return View(blogListByCategory);
         }
 
+    
         public ActionResult AdminBlogList()
         {
             var bloglist = bm.GelAll();
@@ -248,6 +271,13 @@ namespace BlogPageProject.Controllers
             var comments = cm.CommentBybLog(id);
 
             return View(comments);
+        }
+
+        public ActionResult AuthorBlogList(int id)
+        {
+
+            var blogs = bm.GetBlogByAuthor(id);
+            return View(blogs);
         }
 
 

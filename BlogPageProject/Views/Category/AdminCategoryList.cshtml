@@ -9,6 +9,8 @@
 
 }
 
+@{ string color = "";}
+
 
 
 <!DOCTYPE html>
@@ -65,31 +67,28 @@
 
                             </th>
 
-                            <th style="width: 20%">
+                            <th style="width: 10%">
 
                                 Kategori Adı
 
                             </th>
 
-                            <th style="width: 30%">
+                            <th style="width: 12%">
 
                                 Son Blog
 
                             </th>
 
-                            <th>
 
-                                Kategori Bar
 
-                            </th>
-
-                            <th style="width: 8%" class="text-center">
+                            <th style="width: 10%" class="text-center">
 
                                 Durum
 
                             </th>
 
-                            <th style="width: 20%">
+
+                            <th style="width: 15%">
 
                             </th>
 
@@ -100,6 +99,17 @@
                     <tbody>
                         @foreach (var item in Model)
                         {
+                            if (item.CategoryStatus == true)
+                            {
+                                color = "badge badge-success";
+
+                            }
+
+                            if (item.CategoryStatus == false)
+                            {
+                                color = "badge badge-danger";
+
+                            }
                             <tr>
 
                                 <td>
@@ -152,33 +162,16 @@
 
                                 </td>
 
-                                <td class="project_progress">
-
-                                    <div class="progress progress-sm">
-
-                                        <div class="progress-bar bg-green" role="progressbar" aria-volumenow="57" aria-volumemin="0" aria-volumemax="100" style="width: 57%">
-
-                                        </div>
-
-                                    </div>
-
-                                    <small>
-
-                                        57% Complete
-
-                                    </small>
-
-                                </td>
 
                                 <td class="project-state">
 
-                                    <span class="badge badge-success">Success</span>
+                                    <span class="@color">@item.CategoryStatus</span>
 
                                 </td>
 
                                 <td class="project-actions text-right">
 
-                                    <a class="btn btn-primary btn-sm" href="#">
+                                    <a class="btn btn-primary btn-sm" href="/Blog/BlogByCategory/@item.CategoryID">
 
                                         <i class="fas fa-folder">
 
@@ -188,7 +181,7 @@
 
                                     </a>
 
-                                    <a class="btn btn-info btn-sm" href="#">
+                                    <a class="btn btn-info btn-sm" href="/Category/CategoryEdit/@item.CategoryID">
 
                                         <i class="fas fa-pencil-alt">
 
@@ -198,13 +191,23 @@
 
                                     </a>
 
-                                    <a class="btn btn-danger btn-sm" href="#">
+                                    <a class="btn btn-danger btn-sm" href="/Category/CategoryDelete/@item.CategoryID">
 
                                         <i class="fas fa-trash">
 
                                         </i>
 
                                         Sil
+
+                                    </a>
+
+                                    <a class="btn btn-dark btn-sm" href="/Category/CategoryActive/@item.CategoryID">
+
+                                        <i class="fas fa-trash">
+
+                                        </i>
+
+                                        Aktif Yap
 
                                     </a>
 
@@ -217,6 +220,7 @@
 
                 </table>
 
+
             </div>
 
             <!-- /.card-body -->
@@ -226,6 +230,30 @@
         <!-- /.card -->
 
     </section>
+    <button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">Yeni Kategori Ekle</button>
+    <div class="modal" id="Modal1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">Yeni Kategori Ekleme Paneli</h2>
+
+                </div>
+                <form method="post" action="/Category/AdminCategoryAdd">
+                    <div class="modal-body">
+                        <label>Kategori Adı</label>
+                        <input type="text" name="CategoryName" class="form-control" />
+                        <br />
+                        <label>Kategori Açıklama</label>
+                        <input type="text" name="CategoryDescription" class="form-control" />
+                        <br />
+                        <button class="btn btn-info">Kaydet</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
 
 </body>
 

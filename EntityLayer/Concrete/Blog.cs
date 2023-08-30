@@ -30,5 +30,7 @@ namespace EntityLayer.Concrete
         public virtual Author Author { get; set; }
 
         public ICollection<Comment> Comments { get; set; }
+
+        public int BlogRating { get; set; }
     }
 }

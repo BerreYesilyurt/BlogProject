@@ -12,11 +12,13 @@ namespace BlogPageProject.Controllers
     {
         ContactManager cm = new ContactManager();
         // GET: Contact
+        [AllowAnonymous]    
         public ActionResult Index()
         {
             return View();
         }
 
+        [AllowAnonymous]
         [HttpGet]
         public ActionResult SendMessage()
         {
@@ -24,6 +26,7 @@ namespace BlogPageProject.Controllers
             return View();
         }
 
+        [AllowAnonymous]    
         [HttpPost]
         public ActionResult SendMessage(Contact p)
         {

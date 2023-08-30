@@ -12,6 +12,7 @@ namespace BlogPageProject.Controllers
     {
         CommentManager cm = new CommentManager();
 
+        [AllowAnonymous]
         // GET: Comment
         public PartialViewResult CommentList(int id)
         {
@@ -20,6 +21,7 @@ namespace BlogPageProject.Controllers
             return PartialView(commentList);
         }
 
+        [AllowAnonymous]    
         [HttpGet] /*Sayfa yüklendiğinde çalışan kısım*/
         public PartialViewResult LeaveComment(int id)
         {
@@ -28,10 +30,11 @@ namespace BlogPageProject.Controllers
             return PartialView();
         }
 
-
+        [AllowAnonymous]
         [HttpPost] 
         public PartialViewResult LeaveComment(Comment c )
         {
+            c.CommentStatus = true;
             cm.CommentAdd(c);
 
             return PartialView();
