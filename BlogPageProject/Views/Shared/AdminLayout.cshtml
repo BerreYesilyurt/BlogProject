@@ -64,7 +64,8 @@
                             </a>
                         </li>
 
-
+                        @if (User.IsInRole("A"))
+                        {
                         <li class="nav-item">
                             <a href="/Blog/AdminBlogList2" class="nav-link">
                                 <i class="nav-icon fas fa-blog"></i>
@@ -74,6 +75,7 @@
                                 </p>
                             </a>
                         </li>
+                        }
 
                         <li class="nav-item">
                             <a href="/Author/AuthorList" class="nav-link">
@@ -190,7 +192,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="../widgets.html" class="nav-link">
+                            <a href="/User/LogOut" class="nav-link">
                                 <i class="nav-icon fas fa-car"></i>
                                 <p>
                                     Çıkış Yap
