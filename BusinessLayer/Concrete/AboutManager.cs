@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,26 +10,38 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class AboutManager
+    public class AboutManager:IAboutService
     {
+        IAboutDal _aboutDal;
         Repository<About> repoabout=new Repository<About>();
 
-        public List<About> GetAll()
+        public AboutManager(IAboutDal aboutDal)
         {
-            return repoabout.List();
-
+            _aboutDal = aboutDal;
+        }
+        public About GetById(int id)
+        {
+            throw new NotImplementedException();
         }
 
-        public int UpdateAboutBM(About p)
+        public List<About> GetList()
         {
-            About about=repoabout.Find(x=>x.AboutID==p.AboutID);    
-            about.AboutContent1 = p.AboutContent1;  
-            about.AboutContent2 = p.AboutContent2;
-            about.AboutImage1 = p.AboutImage1;  
-            about.AboutImage2 = p.AboutImage2;
-            about.AboutID = p.AboutID;  
+            return _aboutDal.List();
+        }
 
-            return repoabout.Update(about);
+        public void TAdd(About t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TDelete(About t)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void TUpdate(About t)
+        {
+            _aboutDal.Update(t);
         }
     }
 }

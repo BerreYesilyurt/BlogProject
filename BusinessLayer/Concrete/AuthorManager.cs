@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,54 +10,43 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class AuthorManager
+    public class AuthorManager:IAuthorService
     {
         Repository<Author> repoaAuthor = new Repository<Author>();
+        IAuthorDal _authorDal;
 
-
-        // Tüm yazar listesini getirme
-        public List<Author> GetAll()
+        public AuthorManager(IAuthorDal authorDal)
         {
-            return repoaAuthor.List();
+            _authorDal = authorDal;
         }
 
-        // Yeni yazar ekleme
-        public int AddAuthorBL(Author p)
+        public List<Author> GetList()
         {
-            // Parametreden gönderilen değerlerin gçerliliğinin kontrolü
-            if(p.AuthorName =="" || p.AboutShort=="" || p.AuthorTitle == "")
-            {
-                return -1;
-            }
-
-            return repoaAuthor.Insert(p);
+            return _authorDal.List();  
+        }
+        public Author GetById(int id)
+        {
+            return _authorDal.GetById(id);  
         }
 
-
-        public Author FindAuthor(int id)
+        public void AuthorDelete(Author author)
         {
-
-
-            return repoaAuthor.Find(x => x.AuthorID == id);
-
-
+            throw new NotImplementedException();
         }
 
-        public int EditAuthor(Author p)
+        public void TAdd(Author t)
         {
-            Author author = repoaAuthor.Find(x => x.AuthorID == p.AuthorID);
-            author.AuthorName = p.AuthorName;   
-            author.AuthorTitle = p.AuthorTitle; 
-            author.AuthorAbout=p.AuthorAbout;   
-            author.AuthorImage=p.AuthorImage;   
-            author.AboutShort=p.AboutShort; 
-            author.Password=p.Password; 
-            author.PhoneNumber=p.PhoneNumber;   
-            author.Mail=p.Mail;
+            _authorDal.Insert(t);
+        }
 
-            return repoaAuthor.Update(author);
+        public void TDelete(Author t)
+        {
+            throw new NotImplementedException();
+        }
 
-            
+        public void TUpdate(Author t)
+        {
+            _authorDal.Update(t);
         }
     }
 }

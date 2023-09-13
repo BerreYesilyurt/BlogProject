@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using DataAccessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -14,7 +15,7 @@ namespace BlogPageProject.Controllers
     public class UserController : Controller
     {
         UserProfileManager userProfile = new UserProfileManager();
-        BlogManager bm = new BlogManager();
+        BlogManager bm = new BlogManager(new EfBlogDal());
 
         // GET: User
         public ActionResult Index()
@@ -42,7 +43,7 @@ namespace BlogPageProject.Controllers
         [HttpGet]
         public ActionResult UpdateBlogs(int id)
         {
-            Blog blog = bm.FindBlog(id);
+            Blog blog = bm.GetById(id);
             Context c = new Context();
 
             List<SelectListItem> values = (from x in c.Categories.ToList()
@@ -68,7 +69,7 @@ namespace BlogPageProject.Controllers
         [HttpPost]
         public ActionResult UpdateBlogs(Blog p)
         {
-            bm.UpdateBlog(p);
+            bm.TUpdate(p);
 
             return RedirectToAction("BlogList");
         }
@@ -103,7 +104,7 @@ namespace BlogPageProject.Controllers
         [HttpPost]
         public ActionResult AddNewBlogs(Blog b)
         {
-            bm.BlogAddBL(b);
+            bm.TAdd(b);
 
             return RedirectToAction("BlogList");
         }

@@ -13,10 +13,12 @@
 
     @Html.Label("Kategori Adı") @*Label kısmı*@
     @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" }) @*İnput kısmı*@
+    @Html.ValidationMessageFor(x => x.CategoryName)
     <br />
 
     @Html.Label("Açıklama") @*Label kısmı*@
     @Html.TextBoxFor(x => x.CategoryDescription, new { @class = "form-control" }) @*İnput kısmı*@
+    @Html.ValidationMessageFor(x => x.CategoryDescription)
 
     <br />
 

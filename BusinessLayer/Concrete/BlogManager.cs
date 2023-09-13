@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,79 +10,57 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class BlogManager
+    public class BlogManager:IBlogService
     {
+        IBlogDal _blogDal;
         Repository<Blog> repoblog = new Repository<Blog>();
 
-        public List<Blog> GelAll()
+        public BlogManager(IBlogDal blogDal)
         {
-
-            return repoblog.List();
+            _blogDal = blogDal;
         }
+
 
         public List<Blog> GetBlogByAuthor(int id)
         {
-            return repoblog.List(x => x.AuthorID == id);
+            return _blogDal.List(x => x.AuthorID == id);
         }
 
         public List<Blog> GetBlogById(int id)
         {
-            return repoblog.List(x => x.BlogID == id); /*Burada BlogManager sınıfında kullandığımız List metodu ile listeleme yaptık.
+            return _blogDal.List(x => x.BlogID == id); /*Burada BlogManager sınıfında kullandığımız List metodu ile listeleme yaptık.
                                                         EF metodu kullanmadık. Örneğin ToList yapzarak yapsaydık SOLID'e aykırı hareket edilmiş olurdu.*/
         }
 
         public List<Blog> GetBlogByCategory(int id)
         {
 
-            return repoblog.List(x => x.CategoryID == id);
+            return _blogDal.List(x => x.CategoryID == id);
         }
 
-        public int BlogAddBL(Blog p)
+        public List<Blog> GetList()
         {
-            if (p.BlogTitle == " " || p.BlogImage == " " || p.BlogTitle.Length < 5 || p.BlogContent.Length <= 200)
-            {
-                return -1;
-            }
-
-            return repoblog.Insert(p);
-
+            return _blogDal.List(); 
         }
-
-        public int DeleteBlog(int p)
+        public Blog GetById(int id)
         {
-            Blog blog = repoblog.Find(x => x.BlogID == p); // Silinen blogun değerlerini tutan, Blog sınıfından türemiş bir blog parametresi
-
-            return repoblog.Delete(blog);
-
+            return _blogDal.GetById(id);   
         }
 
-        public Blog FindBlog(int id) {
-
-
-            return repoblog.Find(x => x.BlogID == id);
-        
-        
-        }
-
-        public int UpdateBlog(Blog p)
+        public void TAdd(Blog t)
         {
-            Blog blog = repoblog.Find(x => x.BlogID == p.BlogID);
+            _blogDal.Insert(t);
+        }
 
-            blog.BlogTitle = p.BlogTitle;
-            blog.BlogContent = p.BlogContent;
-            blog.BlogDate = p.BlogDate;
-            blog.BlogImage = p.BlogImage;
-            blog.CategoryID= p.CategoryID;      
-            blog.AuthorID= p.AuthorID;  
-
-
-            return repoblog.Update(blog);
+        public void TDelete(Blog t)
+        {
+            _blogDal.Delete(t);
 
         }
 
-      
-
-
-
+        public void TUpdate(Blog t)
+        {
+            _blogDal.Update(t);
+        }
     }
 }

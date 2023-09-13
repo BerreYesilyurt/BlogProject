@@ -16,3 +16,9 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLa
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\obj\Debug\BusinessLayer.csproj.CopyComplete
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\obj\Debug\BusinessLayer.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\bin\Debug\FluentValidation.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\bin\Debug\FluentValidation.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BusinessLayer\bin\Debug\System.Threading.Tasks.Extensions.xml

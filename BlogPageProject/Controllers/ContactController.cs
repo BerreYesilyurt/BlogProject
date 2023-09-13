@@ -1,5 +1,8 @@
 ﻿using BusinessLayer.Concrete;
+using BusinessLayer.ValidationRules;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+using FluentValidation.Results;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +13,9 @@ namespace BlogPageProject.Controllers
 {
     public class ContactController : Controller
     {
-        ContactManager cm = new ContactManager();
+        ContactManager cm = new ContactManager(new EfContactDal());
         // GET: Contact
-        [AllowAnonymous]    
+        [AllowAnonymous]
         public ActionResult Index()
         {
             return View();
@@ -26,26 +29,42 @@ namespace BlogPageProject.Controllers
             return View();
         }
 
-        [AllowAnonymous]    
+        [AllowAnonymous]
         [HttpPost]
         public ActionResult SendMessage(Contact p)
         {
-            cm.BLContactAdd(p);
+            ContactValidator contactValidator = new ContactValidator();
+            ValidationResult results = contactValidator.Validate(p);
+            if (results.IsValid)
+            {
+                p.MessageDate=DateTime.Parse(DateTime.Now.ToShortDateString());
+                cm.TAdd(p);
+                return RedirectToAction("Index", "Blog");
+
+            }
+            else
+            {
+                foreach (var item in results.Errors)
+                {
+                    ModelState.AddModelError(item.PropertyName, item.ErrorMessage);
+                }
+            }
 
             return View();
         }
 
-        public ActionResult SendBox() {
+        public ActionResult SendBox()
+        {
 
-            var messagelist = cm.GelAll();
+            var messagelist = cm.GetList();
 
-            return View(messagelist);  
-        
+            return View(messagelist);
+
         }
 
         public ActionResult MessageDetails(int id)
         {
-            Contact contact = cm.GetContactDetails(id);
+            Contact contact = cm.GetById(id);
             return View(contact);
         }
     }

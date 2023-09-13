@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrete;
+﻿using BusinessLayer.Abstract;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.Concrete;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -8,72 +10,61 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    public class CategoryManager
+    public class CategoryManager:ICategoryService
     {
-        Repository<Category> repocategory = new Repository<Category>(); /*DataAccessLayer katmanında CRUD işlemleri için oluşturulan Repository sınıfına Category tablosunu vererek bir değişşken oluşturduk.*/
+        Repository<Category> repocategory = new Repository<Category>(); /*DataAccessLayer katmanında CRUD işlemleri için oluşturulan Repository sınıfına Category tablosunu vererek bir değişken oluşturduk.*/
+        ICategoryDal _categoryDal;
 
-        public List<Category> GetAll()
+        public CategoryManager(ICategoryDal categoryDal)
         {
-            return repocategory.List(); /*değişken yardımıyla metota erişim sağladık.*/
+            _categoryDal = categoryDal;
         }
 
-        public int CategoryAddBL(Category p)
+        public void DeleteCategoryBL(int id)
         {
-            if (p.CategoryName == " " || p.CategoryDescription == " " || p.CategoryName.Length < 5 || p.CategoryName.Length >= 20)
-            {
-                return -1;
-            }
-
-            return repocategory.Insert(p);
-
-        }
-
-        public Category FindCategory(int id)
-        {
-
-
-            return repocategory.Find(x=>x.CategoryID==id);
-
-
-        }
-
-        public int EditCategory(Category p)
-        {
-            Category category = repocategory.Find(x => x.CategoryID == p.CategoryID);
-
-            if(p.CategoryName.Length<=4 || p.CategoryName=="" || p.CategoryDescription=="" || p.CategoryDescription.Length >= 30)
-            {
-                return -1;
-
-            }
-            category.CategoryDescription = p.CategoryDescription;
-            category.CategoryName = p.CategoryName;
-
-            return repocategory.Update(category);
-
-
-        }
-
-        public int DeleteCategoryBL(int id)
-        {
-            Category category = repocategory.Find(x => x.CategoryID == id);
+            Category category = _categoryDal.Find(x => x.CategoryID == id);
 
             category.CategoryStatus = false;
 
-            return repocategory.Update(category);
+            _categoryDal.Update(category);
 
 
         }
 
-        public int ActiveCategoryBL(int id)
+        public void ActiveCategoryBL(int id)
         {
-            Category category = repocategory.Find(x => x.CategoryID == id);
+            Category category = _categoryDal.Find(x => x.CategoryID == id);
 
             category.CategoryStatus = true;
 
-            return repocategory.Update(category);
+            _categoryDal.Update(category);
 
 
+        }
+
+        public List<Category> GetList()
+        {
+            return _categoryDal.List();
+        }
+        public Category GetById(int id)
+        {
+            return _categoryDal.GetById(id);
+        }
+
+
+        public void TAdd(Category t)
+        {
+            _categoryDal.Insert(t);
+        }
+
+        public void TDelete(Category t)
+        {
+            _categoryDal.Delete(t);
+        }
+
+        public void TUpdate(Category t)
+        {
+            _categoryDal.Update(t);
         }
     }
 }

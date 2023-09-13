@@ -94,3 +94,9 @@ C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPagePr
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.xml
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.Mvc.dll
 C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\PagedList.Mvc.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\FluentValidation.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Threading.Tasks.Extensions.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\FluentValidation.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Threading.Tasks.Extensions.xml
+C:\Users\Monster_Pc\source\repos\25 Uygulamalı Proje\BlogPageProject\BlogPageProject\bin\System.Runtime.CompilerServices.Unsafe.xml

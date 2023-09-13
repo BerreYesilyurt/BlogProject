@@ -1,4 +1,5 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,7 @@ namespace BlogPageProject.Controllers
     [AllowAnonymous]
     public class MailSubscribeController : Controller
     {
+        SubscribeMailManager sm = new SubscribeMailManager(new EfMailDal());
         [HttpGet]
         public PartialViewResult AddMail()
         {
@@ -20,8 +22,8 @@ namespace BlogPageProject.Controllers
         [HttpPost]  
         public PartialViewResult AddMail(SubscribeMail p)
         {
-            SubscribeMailManager sm=new SubscribeMailManager();
-            sm.BLAdd(p);
+            
+            sm.TAdd(p);
 
             return PartialView();  
         }
