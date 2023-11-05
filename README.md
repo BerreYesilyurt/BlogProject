@@ -1,6 +1,6 @@
 ## BlogProject
 
-**.Net Framework'ün 4.7.2 sürümü ile MVC5 kullanılanarak ve DBFirst yaklaşımıyla bir blog projesi geliştirilmiştir.**
+**.Net Framework'ün 4.7.2 sürümü ile MVC5 kullanılarak ve DBFirst yaklaşımıyla bir blog projesi geliştirilmiştir.**
 
 ## KURULUM
 **Bilgisayarınızda istediğiniz herhangi bir editör ve veri tabanı yönetim sisteminin bulunması gerekmektedir. Ben Visual Studio 2022 ve Sql Server 2019'u kullandım.**
