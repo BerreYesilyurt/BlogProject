@@ -7,65 +7,46 @@
 
 ## SİTE VE ÖZELLİKLERİ
 **Proje temel olarak bir blog sayfasıdır. Çeşitli yazarlar, ilgi alanlarında bloglar yazarak kullanıcılarla paylaşırlar. Kullanıcılar bu blogları okuyabilir, yorumlayabilir ve yazara geri dönüşte bulunabilir. Yazarlar, farklı kategori başlıkları altında blog yazmaktadırlar. Üst yönetici olarak tanımlanan admin, yazarları atamak, düzenlemek ve genel olarak site ile ilgili özelliklerden sorumludur.**
-
-https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/687c262b-26de-4c8a-b944-dfd9fe0b9e69
   
 ---
 
 
-- **Girişte bizi aşağıdaki sayfa karşılamaktadır. Burada, kişi ile ilgili genel bir bilgi edinilmesi amacı vardır.**
+- **Girişte bizi aşağıdaki sayfa karşılamaktadır. Burada, tüm bloglar vardır. Ayrıca sayfalandırma yapısı kullanılmıştır. En altta ise çeşitli yerlere ulaşılabilen bir footer alanı vardır.**
 
-![Ana Sayfa](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/34244a33-a979-4174-a89d-5221b44240eb)
 
-- **Navbar'daki seçeneklere tıklayarak, ya da siteyi aşağıya kaydırarak "Hakkımda" kısmına ulaşabilirsiniz. Burada, kişi hakkında biraz daha ayrıntılı bilgi sahibi olunabilir.**
+![Ana Sayfa](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/7f41b6c3-8c66-4dd9-b642-5622b8c5ab61)
 
-![Ana Sayfa(Tannıtım)](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/e38ba041-1f80-4706-97fe-a19025f8c30d)
 
-- **"Hizmetler" kısmında ise kişinin sunduğu hizmetler bulunmaktadır.**
+![Ana sayfa 2](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/d0a65abf-b249-4c72-9caf-03d2dc9b063b)
 
-![Ana Sayfa(Servisler)](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/d2bcc765-a002-4f8a-88fb-d5f70917cd7d)
 
-- **"Yeteneklerim" kısmında, kişinin yetkin olduğu alanlar ve bu alanda kendini ne kadar geliştirdiğini gösteren bir progressbar tablosu bulunmaktadır.**
+![Ana sayfa 3](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/b128eeb4-84e7-4247-8a04-87844c2a1c69)
+
+
+![Ana sayfa 4](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/7e0a4652-24ea-4829-875e-b9d1b19aedea)
+
+
+- **En üstte bulunan navbar kısmında, kullanıcının hangi kategori dikkatini çekiyorsa o kategorideki blogları okuması için bir kolaylık yapılması amaçlanmıştır.**
+
+![Seyahat](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/e9120f2a-90d4-4651-81c8-ea8a9532b176)
+
+![Teknoloji](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/dcfd91eb-08da-4ddf-b606-ab1aa34c929b)
+
+![Yazılım](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/77875d55-1fd6-423d-8ca3-6a2636461edd)
+
+
+- **"Hakkımızda" kısmında, bu sayfa ve yazarlar hakkında kısaca bilgi edinilmesi amaçlanıyor.**
+
   
-![Ana Sayfa(Yetteneklerim)](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/4a67c9b4-3888-4f4d-a605-05cb89e6a435)
+![Hakkımızda](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/18fae530-d5a5-4d79-9049-fea271759cac)
 
-- **"Projelerim" kısmında kişinin yaptığı projeler yer almaktadır. Kullanıcı ilgili resme tıklayınca, projenin bağlantı adresine yönlendirilmektedir.**
-  
-![Ana Sayfa (Projeler)JPG](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/a57f5699-6bcb-4df4-af3c-024b5e4a00a3)
+![Hakkımızda 2](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/4f0a89a7-89a1-4491-8d7d-c0801a6361d0)
 
-- **"Deneyimlerim" kısmında, kişinin geçmiş tecrübeleri yer almaktadır.**
+![Hakkımızda 3](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/cc75313e-800c-4e16-b319-4da8f62d1949)
 
-![Ana Sayfa(Deneyimler)](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/f5592350-f31a-42c6-937d-c56ac60d5d45)
+- **"İletişim" kısmında ise kullanıcı soruları ya da mesajlarının alınması amaçlanmıştır.**
 
-- **"İletişim" kısmındai siteyi ziyaret eden kullanıcıların mesaj gönderebilmesi adına bir iletişim kutusu ve yanında da site sahibine nasıl ulaşabilecekleri konusunda onları yönlendiren bir yazı bulunmaktadır.**
-  
-![Ana Sayfa(İletişim)](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/4a2b6caa-d93b-4689-ad4c-058838776afa)
-
-![Ana Sayfa(Footer)](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/b720e194-c833-4f13-a235-6de19cfdbb3a)
-
-
----
-
-- **Admin kısmında ise, adminin çeşitli ekleme, silme ve güncelleme işlemleri yapabileceği, genel bilgileri grafiksel olarak görebileceği alanlar bulunmaktadır.**
-
-- **İlk olarak bizi genel bilgilerin gösterildiği bir dashboard alanı karşılamaktadır.**
-
-https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/6d489dc8-1306-4131-9fe2-b4a1c35e769f
-
-- **Ana sayfadaki her bir başlık için ekleme, silme ve güncelleme yapılabilmektedir. Aşağıda bu sayfalar yer almaktadır.**
+![İletişim](https://github.com/BerreYesilyurt/BlogProject/assets/77548130/503f9845-a532-4d8d-945d-1a174230c3f1)
 
  
-![Deneyimler](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/8b173c4b-b308-4387-9c6d-735f4af5ffd9)
-
-
-![Hizmetler](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/91bc6eff-a3c3-4ca1-8f77-ae84170c2724)
-
-
-![İletişim](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/b28cff42-bcc6-4e93-83ab-1506eef3c95d)
-
-
-![Projeler](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/ce429d63-7467-4b31-8ad8-3f8142f9179b)
-
-
-![Yetenekler](https://github.com/BerreYesilyurt/.NetCoreProject/assets/77548130/e4090886-499e-4f72-947b-5dc23a917137)
 
